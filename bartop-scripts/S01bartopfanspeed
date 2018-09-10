@@ -1,0 +1,3 @@
+#!/bin/bash
+python /etc/init.d/bartopfanspeed.py
+
