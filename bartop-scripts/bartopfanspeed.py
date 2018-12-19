@@ -8,10 +8,10 @@ def getCPUtemp():
     cTemp = os.popen('vcgencmd measure_temp').readline()
     return float(cTemp.replace("temp=","").replace("'C\n",""))
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(18,GPIO.OUT)
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(12, GPIO.OUT)
 GPIO.setwarnings(False)
-p=GPIO.PWM(18,100)
+p=GPIO.PWM(12, 100)
 p.start(100)
 time.sleep(1)
 

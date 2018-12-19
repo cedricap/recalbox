@@ -11,7 +11,7 @@ eventFormat = "LhBB"
 EVENT_SIZE = struct.calcsize(eventFormat)
 event = file.read(EVENT_SIZE)
 hotkeyValue = 0
-hotkeyButtonId = 8
+hotkeyButtonId = 6
 volPlusButtonId = 5
 volMinusButtonId = 4
 
