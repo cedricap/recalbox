@@ -11,13 +11,13 @@ eventFormat = "LhBB"
 EVENT_SIZE = struct.calcsize(eventFormat)
 event = file.read(EVENT_SIZE)
 hotkeyValue = 0
-hotkeyButtonId = 6
-volPlusButtonId = 5
-volMinusButtonId = 4
+hotkeyButtonId = 0
+volPlusButtonId = 6
+volMinusButtonId = 1
 
 while event:
     print(struct.unpack(eventFormat, event))
-    (tv_msec,  value, type, id) = struct.unpack(eventFormat, event)
+    (tv_msec, value, type, id) = struct.unpack(eventFormat, event)
     
     if id == hotkeyButtonId:
         hotkeyValue = value
